@@ -1,0 +1,122 @@
+$image_path: '../img';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font: 16px/1.4 'Roboto', sans-serif;
+  color: #5d5d5d;
+  line-height: 1.35;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1200px;
+}
+
+.header {
+  padding: 25px 0;
+  color: #fff;
+  font-weight: 500;
+  font-size: 25px;
+  box-shadow: 0 2px 2px 0 #ccc;
+  background: url('#{$image_path}/header_bg.jpg') 0 0 no-repeat;
+  background-size: cover;
+}
+
+.main {
+  display: flex;
+  padding: 60px 0;
+}
+
+.aside {
+  flex-basis: 20%;
+}
+
+.canvas {
+  flex-grow: 1;
+}
+
+.menu {
+  padding-left: 0;
+  margin: 0;
+  list-style-type: none;
+  box-shadow: 4px 4px 9px rgba(0, 0, 0, 0.14), 0px 0px 4px rgba(0, 0, 0, 0.12);
+  &__item {
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #edecec;
+    }
+
+    .action__menu & {
+      padding-left: 60px;
+      background-position: 20px center;
+      background-repeat: no-repeat;
+      &.bucket {
+        background-image: url('#{$image_path}/paint.svg');
+      }
+      &.dropper {
+        background-image: url('#{$image_path}/dropper.svg');
+      }
+      &.move {
+        background-image: url('#{$image_path}/move.svg');
+      }
+      &.transform {
+        background-image: url('#{$image_path}/transform.svg');
+      }
+    }
+
+    .color__menu & {
+      &::before {
+        position: relative;
+        top: 5px;
+        display: inline-block;
+        margin-right: 20px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        content: '';
+      }
+      &.red {
+        &::before {
+          background-color: red;
+        }
+      }
+      &.blue {
+        &::before {
+          background-color: blue;
+        }
+      }
+      &.prev {
+        &::before {
+          background-color: green;
+        }
+      }
+      &.current {
+        &::before {
+          background-color: #ccc;
+        }
+      }
+    }
+
+    &:hover {
+      background-color: rgba(250, 136, 157, 0.3);
+    }
+  }
+}
+
+.action {
+  margin-bottom: 60px;
+}
+
+.canvas {
+  canvas {
+    width: 512px;
+    height: 512px;
+  }
+}
