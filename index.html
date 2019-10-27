@@ -5,7 +5,7 @@
   <title>CodeJam Palette</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/scss/style.css">
 </head>
 <body>
   <header class="header">
@@ -36,16 +36,14 @@
           </div>
         </aside>
         <div class="canvas">
-          <canvas id="canvas">
-
-          </canvas>
+          <canvas id="canvas" width="512" height="512"></canvas>
         </div>
         <aside class="aside aside-nav">
           <div class="switcher">
             <nav class="switcher-menu menu">
-              <li class="menu__item">4 x 4</li>
-              <li class="menu__item">32 x 32</li>
-              <li class="menu__item">512 x 512</li>
+              <li class="menu__item" id="data_4x">4 x 4</li>
+              <li class="menu__item" id="data_32x">32 x 32</li>
+              <li class="menu__item" id="data_pic">256 x 256</li>
             </nav>
           </div>
         </aside>
@@ -54,5 +52,6 @@
 
 
   </main>
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
