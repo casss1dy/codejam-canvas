@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CodeJam Palette</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/scss/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      CodeJam Palette
+    </div>
+  </header>
+
+  <main class="main-wrapper">
+    <div class="container">
+      <div class="main">
+        <aside class="aside aside-menu">
+          <div class="action">
+            <ul class="action__menu menu">
+              <li class="bucket menu__item">Paint bucket</li>
+              <li class="dropper menu__item">Choose color</li>
+              <li class="move menu__item">Move</li>
+              <li class="transform menu__item">Transform</li>
+            </ul>
+          </div>
+          <div class="color">
+            <ul class="color__menu menu">
+              <li class="current menu__item">Current color</li>
+              <li class="prev menu__item">Previous color</li>
+              <li class="red menu__item">Red</li>
+              <li class="blue menu__item">Blue</li>
+            </ul>
+          </div>
+        </aside>
+        <div class="canvas">
+          <canvas id="canvas" width="512" height="512"></canvas>
+        </div>
+        <aside class="aside aside-nav">
+          <div class="switcher">
+            <nav class="switcher-menu menu">
+              <li class="menu__item" id="data_4x">4 x 4</li>
+              <li class="menu__item" id="data_32x">32 x 32</li>
+              <li class="menu__item" id="data_pic">256 x 256</li>
+            </nav>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+
+  </main>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
